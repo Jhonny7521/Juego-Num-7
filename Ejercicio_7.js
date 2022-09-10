@@ -2687,6 +2687,7 @@ if (reversed == null) { reversed = false; }
 		var g = esc_2.fajaT.g_prod2;
 		var gru_p = [g.p1, g.p2, g.p3, g.p4, g.p5, g.p6, g.p7, g.p8, g.p9, g.p10, g.p11, g.p12, g.p13, g.p14, g.p15, g.p16];
 		var numOrdn = 0;
+		var objetosAgregados = [];
 		
 		var ptj = 0;
 		
@@ -2770,6 +2771,7 @@ if (reversed == null) { reversed = false; }
 			ptj = 0;
 			numOrdn = 0;
 			seg = 150;
+			objetosAgregados.length = 0;
 			
 			_current = 0;
 			
@@ -2936,7 +2938,10 @@ if (reversed == null) { reversed = false; }
 				var pt = item.localToLocal(item.pc.x , item.pc.y , objective);
 				if (objective.hitTest(pt.x , pt.y)) 
 				{
-					ptj++;	
+					if (!objetosAgregados.includes(item.name)){
+						objetosAgregados.push(item.name);
+						ptj++;
+						}
 				}
 				else 
 				{
@@ -2997,44 +3002,44 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/adorno.png?1662367206350", id:"adorno"},
-		{src:"images/atun.png?1662367206350", id:"atun"},
-		{src:"images/btn_.png?1662367206350", id:"btn_"},
-		{src:"images/btn_g.png?1662367206350", id:"btn_g"},
-		{src:"images/cerealch.png?1662367206350", id:"cerealch"},
-		{src:"images/cereal.png?1662367206350", id:"cereal"},
-		{src:"images/cilindro.png?1662367206350", id:"cilindro"},
-		{src:"images/cinta_t.png?1662367206350", id:"cinta_t"},
-		{src:"images/cubo.png?1662367206350", id:"cubo"},
-		{src:"images/destellos1.png?1662367206350", id:"destellos1"},
-		{src:"images/destellos2.png?1662367206350", id:"destellos2"},
-		{src:"images/esc_2.jpg?1662367206350", id:"esc_2"},
-		{src:"images/fondo_E1.jpg?1662367206350", id:"fondo_E1"},
-		{src:"images/ind_b.png?1662367206350", id:"ind_b"},
-		{src:"images/ind_f.png?1662367206350", id:"ind_f"},
-		{src:"images/jamon.png?1662367206351", id:"jamon"},
-		{src:"images/juguete.png?1662367206351", id:"juguete"},
-		{src:"images/maquina.png?1662367206351", id:"maquina"},
-		{src:"images/nota_final.png?1662367206351", id:"nota_final"},
-		{src:"images/parlante.png?1662367206351", id:"parlante"},
-		{src:"images/pila.png?1662367206351", id:"pila"},
-		{src:"images/piramide.png?1662367206351", id:"piramide"},
-		{src:"images/piramide2.png?1662367206351", id:"piramide2"},
-		{src:"images/piramideE.png?1662367206351", id:"piramideE"},
-		{src:"images/queso.png?1662367206351", id:"queso"},
-		{src:"images/rayitos1.png?1662367206351", id:"rayitos1"},
-		{src:"images/rayitos2.png?1662367206351", id:"rayitos2"},
-		{src:"images/soda.png?1662367206351", id:"soda"},
-		{src:"images/te.png?1662367206351", id:"te"},
-		{src:"images/temp_1.png?1662367206351", id:"temp_1"},
-		{src:"images/temp_2.png?1662367206351", id:"temp_2"},
-		{src:"images/torta.png?1662367206351", id:"torta"},
-		{src:"images/tprobzoder.png?1662367206351", id:"tprobzoder"},
-		{src:"images/tprobzoizq.png?1662367206351", id:"tprobzoizq"},
-		{src:"images/tprocbza.png?1662367206351", id:"tprocbza"},
-		{src:"images/tprocrpo.png?1662367206351", id:"tprocrpo"},
-		{src:"images/vela.png?1662367206351", id:"vela"},
-		{src:"images/yogurt.png?1662367206351", id:"yogurt"}
+		{src:"images/adorno.png?1662774104155", id:"adorno"},
+		{src:"images/atun.png?1662774104155", id:"atun"},
+		{src:"images/btn_.png?1662774104155", id:"btn_"},
+		{src:"images/btn_g.png?1662774104155", id:"btn_g"},
+		{src:"images/cerealch.png?1662774104155", id:"cerealch"},
+		{src:"images/cereal.png?1662774104155", id:"cereal"},
+		{src:"images/cilindro.png?1662774104155", id:"cilindro"},
+		{src:"images/cinta_t.png?1662774104155", id:"cinta_t"},
+		{src:"images/cubo.png?1662774104155", id:"cubo"},
+		{src:"images/destellos1.png?1662774104155", id:"destellos1"},
+		{src:"images/destellos2.png?1662774104155", id:"destellos2"},
+		{src:"images/esc_2.jpg?1662774104155", id:"esc_2"},
+		{src:"images/fondo_E1.jpg?1662774104155", id:"fondo_E1"},
+		{src:"images/ind_b.png?1662774104155", id:"ind_b"},
+		{src:"images/ind_f.png?1662774104155", id:"ind_f"},
+		{src:"images/jamon.png?1662774104155", id:"jamon"},
+		{src:"images/juguete.png?1662774104155", id:"juguete"},
+		{src:"images/maquina.png?1662774104155", id:"maquina"},
+		{src:"images/nota_final.png?1662774104155", id:"nota_final"},
+		{src:"images/parlante.png?1662774104155", id:"parlante"},
+		{src:"images/pila.png?1662774104155", id:"pila"},
+		{src:"images/piramide.png?1662774104155", id:"piramide"},
+		{src:"images/piramide2.png?1662774104155", id:"piramide2"},
+		{src:"images/piramideE.png?1662774104155", id:"piramideE"},
+		{src:"images/queso.png?1662774104155", id:"queso"},
+		{src:"images/rayitos1.png?1662774104155", id:"rayitos1"},
+		{src:"images/rayitos2.png?1662774104155", id:"rayitos2"},
+		{src:"images/soda.png?1662774104155", id:"soda"},
+		{src:"images/te.png?1662774104155", id:"te"},
+		{src:"images/temp_1.png?1662774104155", id:"temp_1"},
+		{src:"images/temp_2.png?1662774104155", id:"temp_2"},
+		{src:"images/torta.png?1662774104155", id:"torta"},
+		{src:"images/tprobzoder.png?1662774104155", id:"tprobzoder"},
+		{src:"images/tprobzoizq.png?1662774104155", id:"tprobzoizq"},
+		{src:"images/tprocbza.png?1662774104155", id:"tprocbza"},
+		{src:"images/tprocrpo.png?1662774104155", id:"tprocrpo"},
+		{src:"images/vela.png?1662774104155", id:"vela"},
+		{src:"images/yogurt.png?1662774104155", id:"yogurt"}
 	],
 	preloads: []
 };
